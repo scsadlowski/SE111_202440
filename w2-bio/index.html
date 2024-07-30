@@ -6,13 +6,23 @@
     <meta name="author" content="S Sadlowski">
     <meta name="description" content="About Suzanne">
     <title>Bio-Suzanne</title>
-    <style> .center-header {text-align: center; } </style>
+    <style> .center-header {text-align: center; } 
+    
+        div { /*applies to ALL divs in the page*/
+            border:1px solid black;
+            padding:10px; /*adds 10px of space to all 4 sides inbetween content & border*/
+            margin:5px;/*adds 5px of space between elements (space added outside of border)*/
+        }
+        #footer {
+            font-size:17px;
+            text-align:center;
+        }
+    </style>
 </head>
-<body>
-    <main style="background-color: aqua;">
-    <style> .center-header {text-align: center; } </style>    
+<body style="background-color: aqua;">
+    <main> 
     <header id="header">
-        <img src="images/lights.jpg" style="width: 100%; height: auto;">
+        <img src="images/lights.jpg" alt="lights" style="width: 100%; height: auto">
         <h1 class="center-header" style="text-decoration-color: blueviolet;">--------------- Suzanne Sadlowski - About Me ---------------</h1>
         <div class="center-header" id="nav">
 
@@ -20,36 +30,32 @@
             <a href="#school">SCHOOLING</a>
             <a href="#hobbies">HOBBIES</a>
             <a href="#quotes">Favorite Quotes</a>
-            <a href="#footer">Bottom of Page</a></div>
+            <a href="#footer">Bottom of Page</a>
+        </div>
         <div id="bio" class="center-header" style="background-color: blueviolet;">
-            <img src="images/Screenshot 2024-07-28 110637.png" alt="Sue">
-            <p><h3><u>Bio</u> Dynamic and zealous about learning.  Well organized, resilient and creative.  Holds 14 years experience in Network Security Field.  Currently attends New England Institute of Technology (NEIT) with a focus in Cybersecurity.  Education is well rounded with a Bachelor in Computer Science and an Associate in Liberal Arts.  A developed understanding of network and infrastructure design and firewall security.  Holds a part time position at an award winning Brewhouse Restaurant as the Lead Expo and Quality Control assistant.  Successful due to excellent communication and attention to detail.  Outside work and school; mom, self-taught chef, volunteer, supporter of Black Marlins and USA swimming organizations.</h3></p>
-            <img src="images/American and Polish Flags.GIF" alt="American/Polish Flag" style="width:200px;">
+            <img src="images/Screenshot2024-07-28110637.png" alt="Sue">
+            <h2>Bio</h2>
+            <p>Dynamic and zealous about learning.  Well organized, resilient and creative.  Holds 14 years experience in Network Security Field.  Currently attends New England Institute of Technology (NEIT) with a focus in Cybersecurity.  Education is well rounded with a Bachelor in Computer Science and an Associate in Liberal Arts.  A developed understanding of network and infrastructure design and firewall security.  Holds a part time position at an award winning Brewhouse Restaurant as the Lead Expo and Quality Control assistant.  Successful due to excellent communication and attention to detail.  Outside work and school; mom, self-taught chef, volunteer, supporter of Black Marlins and USA swimming organizations.
+            </p>
+            <img src="images/AmericanandPolishFlags.GIF" alt="American/Polish Flag" style="width:200px;">
             <hr>
-            </div>
-            
-    
+        </div>
     </header>
-        <div> <!--SCHOOLING SECTION-------------------------->
-            <style> .center-header {text-align: center; } </style>
-            <div id="school" class="center-header"> 
-                <!--Colleges I have attended, graduated, current-->
-                <h2><u>Schooling</u></h2>
-                <ol>
-                    <li><em>NEIT - Cybersecurity</em></li>
-                    <li>Rhode Island College<i>(spanish class)</i></li>
-                    <li>Fitchburg State - Computer Science - 2004</li>
-                    <li>Mount Whachussett Community - Liberal Arts - 2000</li>
+        <div id="school" class="center-header"> 
+            <!--Colleges I have attended, graduated, current-->
+            <h2><u>Schooling</u></h2>
+            <ol>
+                <li><em>NEIT - Cybersecurity</em></li>
+                <li>Rhode Island College<i>(spanish class)</i></li>
+                <li>Fitchburg State - Computer Science - 2004</li>
+                <li>Mount Whachussett Community - Liberal Arts - 2000</li>
     
-                </ol>
-    
-                <img src="images/fitchburg_state_university_logo.jpg" alt="missing" style="width:50px;">
-                <img src="images/Mount Wachussett.jpg" alt="missing" style="width:50px;">
-            </div>
+            </ol>
+            <img src="images/fitchburg_state_university_logo.jpg" alt="missing" style="width:50px;"><img src="images/MountWachussett.jpg" alt="missing" style="width:50px;">
+        </div>
             <!--Some hobbies from my ealier years-->
-            <div id="hobbies" class="center-header"> 
-                <h2><u>Hobbies from previous life</u></h2>
-    
+        <div id="hobbies" class="center-header"> 
+            <h2><u>Hobbies from previous life</u></h2>
                 <ul>
                     <li>Weight Training & Distance Running</li>
                     <li>Softball Competitions</li>
@@ -57,17 +63,16 @@
     
                 </ul>
                 <img src="images/ondeck.jpg" alt="miss me some softball games" style="width:100px;"><img src="images/gametime.jpg" alt="miss me some softball games" style="width:100px;">
-            </div>
-            <div id="quotes" class="center-header"> 
-                <h2><u>Favorite Quotes</u></h2>
-    
+        </div>
+        <div id="quotes" class="center-header"> 
+            <!--Just some quotes i have picked up along the way-->
+            <h2><u>Favorite Quotes</u></h2>   
                 <ul>
                     <li><a href="https://www.linkedin.com/pulse/what-breaks-you-makes-rob-dial">"What breaks you makes you." (Rob Dial)</a></li>
                     <li>"Define your own role." (Amy Hood)</li>
                     <li>"Do what you have to do to get where you want to go." (unknown)</li>
-    
                 </ul>
-            </div>
+        </div>
     <hr>
     <footer id="footer">
             <img src="images/lights.jpg" style="width: 100%; height: auto;" alt="Lights">
