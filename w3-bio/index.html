@@ -19,7 +19,7 @@
         margin:auto;
         background-color: rgb(100, 55, 86);
         }
-        #nav{background-color: white; color: rgb(244, 18, 18); font-size: x-large;
+        #nav{background-color: white; color: rgb(244, 18, 18); font-size: x-large; text-align: center;
         }
         .bg{background-color: rgba(244, 132, 236, 0.649); 
         color: white; text-align: center; 
@@ -28,21 +28,20 @@
             text-align: center; 
         }
         .fancy{
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center; 
         }
     </style> <!--/#style-->
 </head>
 <main>
     <header id="header">
-
     </header>
 </main>
 <body>
     <!--#header-->
-    <div id="header" class="bg">
+    <div id="#header" class="bg"> <!--adding in .bg-->
         <h1>---------------------whoIs SuZanne</h1>
     </div><!--/#header-->
-    <div id="nav" class="center">
+    <div id="nav" class="fancy"> <!--calling .fancy for font and center-->
         <!--create a new div to hold button/links to other pages/topics -->
         <div id="buttons">
             <a href="index.html">mySue Home</a>
@@ -50,20 +49,20 @@
             <a href="hobbies.html">SuZie Hobbies</a>
         </div> <!--end #buttons-->
     </div>
-    <div id="content" class="bg">
-        <h2 class="fancy"> Bio <b> about </b> page.</h2>
-        <img src="images/me.jpg" alt="missing" style="width:200px;">
+    <div id="content" class="fancy">
+        <h2 class="fancy"> Bio:</h2>
+        <img src="images/me.jpg" alt="missing" style="width:200px;"> <!--picture of me-->
+        <!--things that make me awsome-->
         <p>Dynamic and zealous about learning.  Well organized, resilient and creative.  Holds 14 years experience in Network Security Field.  Currently attends New England Institute of Technology (NEIT) with a focus in Cybersecurity.  Education is well rounded with a Bachelor in Computer Science and an Associate in Liberal Arts.  A developed understanding of network and infrastructure design and firewall security.  Holds a part time position at an award winning Brewhouse Restaurant as the Lead Expo and Quality Control assistant.  Successful due to excellent communication and attention to detail.  Outside work and school; mom, self-taught chef, volunteer, supporter of Black Marlins and USA swimming organizations.
         </p>
-        <img src="images/polish heritage.jpeg" alt="missing" style="width:150px;">
-
+        <!--I'm a polack-->
+        <img src="images/polishHeritage.jpeg" alt="missing" style="width:150px;">
     </div> <!--/#content-->
-    
-
 
     <div id="footer" class="bg">
         <a href=""> Jump to Top!</a><br>
         <p>&copy; s sadlowski</p>
     </div>
 </body>
+<!--/end-->
 </html>
