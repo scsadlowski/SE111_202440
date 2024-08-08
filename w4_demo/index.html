@@ -7,11 +7,37 @@
 
     <!--in-document styling-->
     <style>
+    
         div{
             border:1px solid black;
             padding:10px;
             margin:10px;
         }
+        /*button styling for main nav*/
+        #button
+        {
+        border:none;
+        padding:none;
+        margin:none;
+        width:535px;
+        margin:auto;
+        /*to use margin-auto, you must first set a width*/
+    }
+    .btn {
+        width:159px;
+        height:50px;
+        text-align:center;
+        /*match line-height to height to center vertically*/
+        line-height:50px;
+        font-size:24px;
+        float:left;
+        margin-right:25px;
+        text-decoration:none;
+    }
+    .btn:hover{
+        background-color:black;
+        color:white;
+    }
 
     </style>
 </head>
@@ -26,9 +52,14 @@
         </div>
         <!--nav-->
         <div id="nav">
-            <a href="index.html">About</a>
-            <a href="cast.html">Cast</a>
-            <a href="review.html">Review</a>
+            <div id="buttons">
+                <a href="index.html" class="btn">About</a>
+                <a href="cast.html" class="btn">Cast</a>
+                <a href="review.html" class="btn">Review</a>
+            </div>
+            <div class="clear" style="clear:both;border:none;padding:none;margin:none;">
+
+            </div>"
         </div>
         <hr>
         <!--content-->
