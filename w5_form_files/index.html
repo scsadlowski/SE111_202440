@@ -10,7 +10,7 @@
     
     <link type="text/css" rel="stylesheet" href="style.css">
 
-    <title>Week 5 | Tables and Forms</title>
+    <title>Party</title>
     <style>
         .bg{background-color: white; 
             color: rgb(12, 12, 12); text-align: center; border-radius:10px; 
@@ -58,35 +58,80 @@
                 <td><h2>Labels</h2></td>
                 <td><h2>Form Fields</h2></td>
             </thead>
-                <tbody>
-                    <tr>
-                        <td>Column</td>
-                        <td>Column</td>
-                    </tr>
-                    <tr>
-                        <td>Column</td>
-                        <td>Column</td>
-                    </tr>
-                    <tr>
-                        <td>Column</td>
-                        <td>Column</td>
-                    </tr>
-                    <tr>
-                        <td>Column</td>
-                        <td>Column</td>
-                    </tr>
-                    <tr>
-                        <td>Column</td>
-                        <td>Column</td>
-                    </tr>
-                    <tr>
-                        <td>Column</td>
-                        <td>Column</td>
-                    </tr>
-                </tbody>
-            </table>
-        
-        </div>   
+            <tbody>
+                <tr>
+                    <td><label for="pfirst">Parent/Guardian Name</label></td>
+                    <td><input type="text" maxlength="20" name=pfirst id="p-first" placeholder="First Name" required><br>
+                    <input type="text" maxlength="20" name=pfirst id="p-first" placeholder="Last Name" required>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="cfirst">Child's First Name</label></td>
+                    <td><input type="text" maxlength="20" name="cfirst" id="c_first" placeholder="Child's Frist Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Child's age</label></td>
+                    <td><input type="text" maxlength="20" name="age" id="a_g_e" placeholder="Child's Age" required></td>
+                </tr>
+                <tr>
+                    <td><h2>Date and Time</h2></td>
+                    <td><h2></h2></td>
+                </tr>
+                <tr>
+                    <td><label for="date">Date</label></td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td><label for="time">Time</label></td>
+                    <td><input type="time" name="time" required></td>
+                </tr>
+                <tr>
+                    <td><label for="guests">Number of Guests</label></td>
+                    <td><input type="number" name="guests" placeholder="Number of Guests"></td>
+                </tr>
+                <tr>
+                    <td><h2>Food</h2></td>
+                    <td><h2></h2></td>
+                </tr>
+                <tr>
+                    <td><label for="size">Size</label></td>
+                    <td><input type="radio" name="size" value="sm">
+                        <input type="radio" name="size" value="med">
+                        <input type="radio" name="size" value="lg">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="drinks">Drinks</label></td>
+                    <td><input type="checkbox" name="drink1" checked="true" value="iceT"><label for="">Iced Tea</label><br>
+                        <input type="checkbox" name="drink2" checked="true" value="water"><label for="">Water</label>
+                        <input type="checkbox" name="drink3" checked="true" value="lemonade"><label for="">Leomonade</label>
+                        <input type="checkbox" name="drink4" checked="true" value="rootBeer"><label for="">Root Beer</label>
+                        <input type="checkbox" name="drink5" checked="true" value="gingerale"><label for="">Gingerale</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="cake">Cake</label></td>
+                    <td>Column</td>
+                </tr>
+                <tr>
+                    <td><h2>Decorations</h2></td>
+                    <td><h2></h2></td>
+                </tr>
+                <tr>
+                    <td><label for="colors">Color Scheme</label></td>
+                    <td><input type="color" name="color"></td>
+                </tr>
+                <tr>
+                    <td><label for="comments">Additional Comments</label></td>
+                    <td><textarea placeholder="Please add any additional Comments" name="comments"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="SUBMIT!"></td>
+                </tr>
+            </tbody>
+        </table>  
     </form>
     <br>
     <div id="footer">
