@@ -14,6 +14,8 @@
     <style>
         .centerMe{text-align: center;
         }
+        .rightSide {text-align: right;
+        }
         table {margin: auto; background-color: rgb(195, 238, 238);
         }
         /**h1 {margin: right}**/ /**playing with alignment...**/
@@ -28,47 +30,47 @@
             <!--for attribute connects labels with input MUST MATCH input's name attribute-->
         <table>
             <thead>
-                <td><h2>Labels</h2></td>
-                <td><h2>Form Fields</h2></td>
+                <td class="centerMe"><h2>Labels</h2></td>
+                <td class="centerMe"><h2>Form Fields</h2></td>
             </thead>
             <tbody>
                 <tr> <!--labels are used to match up with input elements-->
-                    <td><label for="pfirst">Parent/Guardian Name</label></td>
+                    <td class="rightSide"><label for="pfirst" class="rightSide">Parent/Guardian Name: </label></td>
                     <td><input type="text" maxlength="20" name=pfirst id="p-first" placeholder="First Name" required><br>
                     <input type="text" maxlength="20" name=pfirst id="p-first" placeholder="Last Name" required>
                     </td>
                     
                 </tr>
                 <tr>
-                    <td><label for="cfirst">Child's First Name</label></td>
+                    <td class="rightSide"><label for="cfirst">Child's First Name: </label></td>
                     <td><input type="text" maxlength="20" name="cfirst" id="c_first" placeholder="Child's Frist Name" required></td>
                 </tr>
                 <tr>
-                    <td><label for="age">Child's age</label></td>
+                    <td class="rightSide"><label for="age">Child's age: </label></td>
                     <td><input type="text" maxlength="20" name="age" id="a_g_e" placeholder="Child's Age" required></td>
                 </tr>
                 <tr>
-                    <td><h2>Date and Time</h2></td>
+                    <td class="centerMe"><h2>Date and Time</h2></td>
                     <td><img src="images/calendar.jpeg" alt="empty calendar"height="150" width="220"></td>
                 </tr>
                 <tr>
-                    <td><label for="date">Date</label></td>
+                    <td class="rightSide"><label for="date">Date: </label></td>
                     <td><input type="date" name="date" required></td>
                 </tr>
                 <tr>
-                    <td><label for="time">Time</label></td>
+                    <td class="rightSide"><label for="time">Time: </label></td>
                     <td><input type="time" name="time" required></td>
                 </tr>
                 <tr>
-                    <td><label for="guests">Number of Guests</label></td>
+                    <td class="rightSide"><label for="guests">Number of Guests: </label></td>
                     <td><input type="number" name="guests" placeholder="Number of Guests"></td>
                 </tr>
                 <tr>
-                    <td><h2>Food/Drinks/Dessert</h2></td>
+                    <td class="centerMe"><h2>Food/Drinks/Dessert</h2></td>
                     <td><img src="images/shutterstock_64733848.jpg" alt="drink image" width="320" height="150"></td>
                 </tr>
                 <tr>
-                    <td><label for="size">Size</label></td>
+                    <td class="rightSide"><label for="size">Size: </label></td>
                     <td>
                         <input type="radio" name="size" value="sm"><label for="size">sm</label>
                         <input type="radio" name="size" value="med"><label for="size">med</label>
@@ -76,7 +78,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="drinks">Drinks</label></td>
+                    <td class="rightSide"><label for="drinks">Drinks: </label></td>
                     <td>
                         <div id="drink1">
                             <input type="checkbox" name="drink1" checked="true" value="iceT"><label for="drinks1">Iced Tea</label><br>
@@ -96,7 +98,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="iceCream">Ice Cream</label></td>
+                    <td class="rightSide"><label for="iceCream">Ice Cream: </label></td>
                     <td>
                         <select name="iceCream">
                             <option>Chocholate</option>
@@ -106,15 +108,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td><h2>Decorations</h2></td>
+                    <td class="centerMe"><h2>Decorations</h2></td>
                     <td><img src="images/balloons.jpeg" alt="balloons" height="150" width="320"></td>
                 </tr>
                 <tr>
-                    <td><label for="colors">Color Scheme</label></td>
+                    <td class="rightSide"><label for="colors">Color Scheme: </label></td>
                     <td><input type="color" name="color"></td>
                 </tr>
                 <tr>
-                    <td><label for="comments">Additional Comments</label></td>
+                    <td class="rightSide"><label for="comments">Additional Comments: </label></td>
                     <td><textarea placeholder="Please add any additional Comments" name="comments"></textarea></td>
                 </tr>
                 <tr>
