@@ -15,51 +15,27 @@
         .bg{background-color: white; 
             color: rgb(12, 12, 12); text-align: center; border-radius:10px; 
         }
+        .centerMe{text-align: center;
+        }
         table {margin: auto
         }
+        /**h1 {margin: right}**/ /**playing with alignment...**/
     </style>
 </head>
-<body class="bg">
-    <form>
-        <!--labels are used to match up with input elements-->
-        <!--
-            for attribute connects labels with input
-                MUST MATCH input's name attribute
-        -->
-        <label for="firstName">First Name: </label> 
-        <input type="text" name="firstName" id="firstName">
-
-        <!--form elements are inline, so use <br> so separate them-->
-        <br>
-
-        <label for="lastName">Last Name: </label> 
-        <input type="text" name="lastName" id="lastName">
-
-        <br>
-    
-        <!--
-            required attribute means user MUST fill in that element or form will not submit
-        -->
-
-        <label for="email">Email: </label> 
-        <input type="text" name="email" id="email" required>
-
-        <br>
-        <br>
-        <input type="submit" value="SUBMIT!">
-    <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->    
-    <br>
-        <div id="header">
+<body>
+        <div id="header" class="centerMe">
             <h1>Birthday Pary Registration Form</h1>
         </div>
     <div>
+        <form method="post" actions="style.css"> 
+            <!--for attribute connects labels with input MUST MATCH input's name attribute-->
         <table>
             <thead>
                 <td><h2>Labels</h2></td>
                 <td><h2>Form Fields</h2></td>
             </thead>
             <tbody>
-                <tr>
+                <tr> <!--labels are used to match up with input elements-->
                     <td><label for="pfirst">Parent/Guardian Name</label></td>
                     <td><input type="text" maxlength="20" name=pfirst id="p-first" placeholder="First Name" required><br>
                     <input type="text" maxlength="20" name=pfirst id="p-first" placeholder="Last Name" required>
@@ -76,7 +52,7 @@
                 </tr>
                 <tr>
                     <td><h2>Date and Time</h2></td>
-                    <td><h2></h2></td>
+                    <td><img src="images/calendar.jpeg" alt="empty calendar"height="150" width="220"></td>
                 </tr>
                 <tr>
                     <td><label for="date">Date</label></td>
@@ -91,32 +67,50 @@
                     <td><input type="number" name="guests" placeholder="Number of Guests"></td>
                 </tr>
                 <tr>
-                    <td><h2>Food</h2></td>
-                    <td><h2></h2></td>
+                    <td><h2>Food/Drinks/Dessert</h2></td>
+                    <td><img src="images/shutterstock_64733848.jpg" alt="drink image" width="320" height="150"></td>
                 </tr>
                 <tr>
                     <td><label for="size">Size</label></td>
-                    <td><input type="radio" name="size" value="sm">
-                        <input type="radio" name="size" value="med">
-                        <input type="radio" name="size" value="lg">
+                    <td>
+                        <input type="radio" name="size" value="sm"><label for="size">sm</label>
+                        <input type="radio" name="size" value="med"><label for="size">med</label>
+                        <input type="radio" name="size" value="lg"><label for="size">lg</label>
                     </td>
                 </tr>
                 <tr>
                     <td><label for="drinks">Drinks</label></td>
-                    <td><input type="checkbox" name="drink1" checked="true" value="iceT"><label for="">Iced Tea</label><br>
-                        <input type="checkbox" name="drink2" checked="true" value="water"><label for="">Water</label>
-                        <input type="checkbox" name="drink3" checked="true" value="lemonade"><label for="">Leomonade</label>
-                        <input type="checkbox" name="drink4" checked="true" value="rootBeer"><label for="">Root Beer</label>
-                        <input type="checkbox" name="drink5" checked="true" value="gingerale"><label for="">Gingerale</label>
+                    <td>
+                        <div id="drink1">
+                            <input type="checkbox" name="drink1" checked="true" value="iceT"><label for="drinks1">Iced Tea</label><br>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="drink2" checked="true" value="water"><label for="drink2">Water</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="drink3" checked="true" value="lemonade"><label for="drink3">Leomonade</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="drink4" checked="true" value="rootBeer"><label for="drink4">Root Beer</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="drink5" checked="true" value="gingerale"><label for="drink5">Gingerale</label>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td><label for="cake">Cake</label></td>
-                    <td>Column</td>
+                    <td><label for="iceCream">Ice Cream</label></td>
+                    <td>
+                        <select name="iceCream">
+                            <option>Chocholate</option>
+                            <option>Black Raspberry</option>
+                            <option>BYOIC(bring your own ice cream)</option>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td><h2>Decorations</h2></td>
-                    <td><h2></h2></td>
+                    <td><img src="images/balloons.jpeg" alt="balloons" height="150" width="320"></td>
                 </tr>
                 <tr>
                     <td><label for="colors">Color Scheme</label></td>
@@ -131,10 +125,11 @@
                     <td><input type="submit" value="SUBMIT!"></td>
                 </tr>
             </tbody>
-        </table>  
-    </form>
+        </table>
+        </form>  
+    <!--</form>-->
     <br>
-    <div id="footer">
+    <div id="footer" class="centerMe">
         <a href="#header">Back to the Top</a>
         <p>&copy; s sadlowski</p>
     </div>
