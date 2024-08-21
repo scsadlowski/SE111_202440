@@ -24,12 +24,15 @@
         var hours = Number(prompt(`Enter your total hours worked this week.`))
         console.log(hours)
         alert(`${hours}`)
-        //var _gross = hours * _payRate
-        //var _taxTaxAmount = _gross * _taxPercent
-        //var _netPay = _gross - _taxTaxAmount
+        var _gross = Number(_gross)
+        _gross = hours * _payRate
+        var _taxAmount = Number(_taxAmount)
+        _taxAmount = _gross * _taxPercent
+        var _netPay = Number(_netPay)
+        _netPay = _gross - _taxTaxAmount
 
-        //alert(`Your hourly rate is $14.5.  Your worked ${hours}.`)
-        //alert(`Your NetPay is $${_netPay.toFixed(2)}`)
+        alert(`Your hourly rate is $14.  Your worked ${hours}.`)
+        alert(`Your NetPay is $${_netPay.toFixed(2)}`)
         
     </script>
 </body>
