@@ -9,15 +9,28 @@
 </head>
 <body>
     <h1>WK6-JS-Intro</h1>
-    <a href="">Pay Calculator w/ JS</a>
+    <a href="https://se111-sadlowski-202440.netlify.app/w6">Pay Calculator w/ JS</a>
 
     <!--This is my JavaScript in my HTML document-->
     <script>
         var _payRate //declare variable payRate
-        _payRate = 14.5 //assing value of 14.5 to payRate
-        var _taxPercent
-        _taxPercent = .20
-        console.log(`Want to calculate your pay?`)
+        _payRate = 14 //assing value of 14.5 to payRate
+        _payRate = Number(_payRate) //cast payRate from String to number
+        var _taxPercent = .20
+       //_taxPercent = .20
+        alert("Let's calculate your pay.")
+        console.log("Prep user we will calculate pay")
+
+        var hours = Number(prompt(`Enter your total hours worked this week.`))
+        console.log(hours)
+        alert(`${hours}`)
+        //var _gross = hours * _payRate
+        //var _taxTaxAmount = _gross * _taxPercent
+        //var _netPay = _gross - _taxTaxAmount
+
+        //alert(`Your hourly rate is $14.5.  Your worked ${hours}.`)
+        //alert(`Your NetPay is $${_netPay.toFixed(2)}`)
+        
     </script>
 </body>
 </html>
