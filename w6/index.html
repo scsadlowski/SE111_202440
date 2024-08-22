@@ -6,6 +6,10 @@
     <meta name="author" content="s sadlowski">
     <meta name="description" content="Pay calculator">
     <title>Week 6 | JS</title>
+    <style>
+        body{background-color: bisque;
+        }
+    </style>
 </head>
 <body>
     <h1>WK6-JS-Intro</h1>
@@ -14,24 +18,33 @@
     <!--This is my JavaScript in my HTML document-->
     <script>
         var _payRate //declare variable payRate
-        _payRate = 14 //assing value of 14.5 to payRate
+        _payRate = 14 //assing number as value to payRate
         _payRate = Number(_payRate) //cast payRate from String to number
-        var _taxPercent = .20
-       //_taxPercent = .20
-        alert("Let's calculate your pay.")
-        console.log("Prep user we will calculate pay")
+        var _taxPercent = .20 //declare taxPercent and assign value of .20
+        // ?? - Although I did not specifically cast taxpercent to number, it is processing as number.
+        alert("Let's calculate your pay.") //Starting user experience
+        console.log("Prep user we will calculate pay") // ?? Where is this actually going
 
         var hours = Number(prompt(`Enter your total hours worked this week.`))
         console.log(hours)
-        alert(`${hours}`)
+        alert(`${hours} hrs right!`)
+
         var _gross = Number(_gross)
         _gross = hours * _payRate
+        console.log(_gross)
+        //alert(`Gross $${_gross}`) - this was testing functionality as i worked.
         var _taxAmount = Number(_taxAmount)
         _taxAmount = _gross * _taxPercent
+        console.log(_taxAmount)
+        //alert(`Tax $${_taxAmount}`) - this was testing functionality as i worked.
         var _netPay = Number(_netPay)
-        _netPay = _gross - _taxTaxAmount
+        _netPay = _gross - _taxAmount
+        console.log(_netPay)
+        //alert(`NetPay $${_netPay}`) - this was testing functionality as i worked.
 
-        alert(`Your hourly rate is $14.  Your worked ${hours}.`)
+        alert(`Your hourly rate is $${_payRate}.  Your worked ${hours} hours.`)
+        alert(`GrossPay $${_gross}`)
+        alert(`Uncle Samo took $${_taxAmount}`) //i had an uncle Samo, he would have taken his cut too.
         alert(`Your NetPay is $${_netPay.toFixed(2)}`)
         
     </script>
