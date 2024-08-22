@@ -17,27 +17,28 @@
 
     <!--This is my JavaScript in my HTML document-->
     <script>
+        var 
         var _payRate //declare variable payRate
         _payRate = 14 //assing number as value to payRate
-        _payRate = Number(_payRate) //cast payRate from String to number
+        //_payRate = Number(_payRate) //cast payRate from String to number//don't need this
         var _taxPercent = .20 //declare taxPercent and assign value of .20
-        // ?? - Although I did not specifically cast taxpercent to number, it is processing as number.
+        
         alert("Let's calculate your pay.") //Starting user experience
         console.log("Prep user we will calculate pay") // ?? Where is this actually going
 
-        var hours = Number(prompt(`Enter your total hours worked this week.`))
+        var hours = prompt(`Enter your total hours worked this week.`)
         console.log(hours)
         alert(`${hours} hrs right!`)
 
-        var _gross = Number(_gross)
+        var _gross = Number(_gross)//this is not actually needed - #'s are always numbers.
         _gross = hours * _payRate
         console.log(_gross)
         //alert(`Gross $${_gross}`) - this was testing functionality as i worked.
-        var _taxAmount = Number(_taxAmount)
+        var _taxAmount = Number(_taxAmount)//this is not actually needed - #'s are always numbers.
         _taxAmount = _gross * _taxPercent
         console.log(_taxAmount)
         //alert(`Tax $${_taxAmount}`) - this was testing functionality as i worked.
-        var _netPay = Number(_netPay)
+        var _netPay = Number(_netPay) //this is not actually needed - #'s are always numbers.
         _netPay = _gross - _taxAmount
         console.log(_netPay)
         //alert(`NetPay $${_netPay}`) - this was testing functionality as i worked.
