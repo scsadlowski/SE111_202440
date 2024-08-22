@@ -24,9 +24,9 @@
         var _taxPercent = .20 //declare taxPercent and assign value of .20
         
         alert("Let's calculate your pay.") //Starting user experience
-        console.log("Prep user we will calculate pay") // ?? Where is this actually going
+        console.log(`Prep user we will calculate pay`) // ?? Where is this actually going
 
-        var hours = prompt(`Enter your total hours worked this week.`)
+        var hours = Number(prompt(`Enter your total hours worked this week.`))
         console.log(hours)
         alert(`${hours} hrs right!`)
 
@@ -44,9 +44,9 @@
         //alert(`NetPay $${_netPay}`) - this was testing functionality as i worked.
 
         alert(`Your hourly rate is $${_payRate}.  Your worked ${hours} hours.`)
-        alert(`GrossPay $${_gross}`)
-        alert(`Uncle Samo took $${_taxAmount}`) //i had an uncle Samo, he would have taken his cut too.
-        alert(`Your NetPay is $${_netPay.toFixed(2)}`)
+        alert(`Gross Pay $${_gross.toFixed(2)}\nTax Amount $${_taxAmount.toFixed(2)}\nNet Pay $${_netPay.toFixed(2)}`)
+        //alert(`Uncle Samo took $${_taxAmount.toFixed(2)}`) //i had an uncle Samo, he would have taken his cut too.
+        //alert(`Your NetPay is $${_netPay.toFixed(2)}`)
         
     </script>
 </body>
