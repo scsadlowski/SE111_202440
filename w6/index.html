@@ -32,7 +32,7 @@
 
         var _gross = Number(_gross)//this is not actually needed - #'s are always numbers.
         _gross = hours * _payRate
-        console.log(_gross)
+        //console.log(`Gross Pay $${_gross}\nTax Amount $${_taxAmount}\nNet Pay $${_netPay}`)
         //alert(`Gross $${_gross}`) - this was testing functionality as i worked.
         var _taxAmount = Number(_taxAmount)//this is not actually needed - #'s are always numbers.
         _taxAmount = _gross * _taxPercent
@@ -44,6 +44,7 @@
         //alert(`NetPay $${_netPay}`) - this was testing functionality as i worked.
 
         alert(`Your hourly rate is $${_payRate}.  Your worked ${hours} hours.`)
+        console.log(`Gross Pay $${_gross}\nTax Amount $${_taxAmount}\nNet Pay $${_netPay}`)
         alert(`Gross Pay $${_gross.toFixed(2)}\nTax Amount $${_taxAmount.toFixed(2)}\nNet Pay $${_netPay.toFixed(2)}`)
         //alert(`Uncle Samo took $${_taxAmount.toFixed(2)}`) //i had an uncle Samo, he would have taken his cut too.
         //alert(`Your NetPay is $${_netPay.toFixed(2)}`)
