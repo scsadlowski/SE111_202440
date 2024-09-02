@@ -177,7 +177,7 @@
             var you = document.querySelector(`#you`)
 
             //add event listeners to non-button items - all elements are fair Game
-            me.addEventListener(`click`, clickedGreen())
+            me.addEventListener(`click`, clickedGreen(me))
             function clickedGreen(event){
                 console.log(`clickedGreen() reached!`)
                 me.style.fontSize = `40px`
@@ -186,7 +186,8 @@
             var button = document.querySelector(`#submit`)
             //demoing an anonymous function (function without a name; immediately defined
             //we use these when the function will not be reused outside of the specific event
-            button.addEventListener(`click`, function(event){
+            button.addEventListener(`click`, function(event)
+            {
                 console.log(event)
             })
 
