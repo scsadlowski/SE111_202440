@@ -173,11 +173,12 @@
             var button = document.querySelector(`#SUBMIT`)
             //demoing an anonymous function (function without a name; immediately defined
             //we use these when the function will not be reused outside of the specific event
-            button.addEventListener(`click`, function(event)
+            document.querySelector(`#enter-button`).addEventListener(`click`, submitNow)
+            /*utton.addEventListener(`click`, function(event)
             {
                 console.log(event)
             }) //this is weird that the ) comes after {}, but okay Javascript.
-            document.querySelector(`#enter-button`).addEventListener(`click`, submitNow)
+            document.querySelector(`#enter-button`).addEventListener(`click`, submitNow)*/
             function submitNow(e)
             {
                 console.log(`Inside submit function`)
