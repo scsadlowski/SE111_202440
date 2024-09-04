@@ -39,39 +39,47 @@
             <tr><td><input type="button" id="enter-button" value="ENTER"></td></tr><td></td>
                 <br>
         </table>   
-    </form>
+    
     <h2 id="hello">Hello</h2>
     <!-- give the button below (that is the only form element without a label) an id of "enter-button"-->
     
     <!--<div id="info" style="border:1px solid black; width:500px; height:200px;">
     </div>--><!--# info-->
-    
        
-        <div id="final" style="border:1px solid rgb(157, 240, 236); padding:15px; background-color:rgb(168, 168, 168);">
+    <div id="final" style="border:1px solid rgb(157, 240, 236); padding:15px; background-color:rgb(168, 168, 168);">
                 
-                    <h3>Employee Info: </h3>
-                    <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is filled.</i></p>
-                    <!---NOTES FOR TESTING:
-                            *below is where the form values (and new values processed by the js) will be displayed-->
-                    <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
+        <h3>Employee Info: </h3>
+        <p id="info" style="font-family:Courier New, monospace;"><i>Information will be loaded once above form is filled.</i></p>
+        <!---NOTES FOR TESTING:
+            *below is where the form values (and new values processed by the js) will be displayed-->
+        <p id="check" style="font-family:Courier New, monospace; width:220px; text-align:right;"></p>
                 
-        </div>
+    </div>
            
-                <!--NOTES FOR TESTING:
+    <!--NOTES FOR TESTING:
                         *clicking the below button will trigger a call to the submitNow()
                         *success will be determined if correct info is displayed in the alert()-->
     <h3><i>If the above information is correct, please press "SUBMIT"</i></h3>
-    <input type="button" id="enter-button" value="SUBMIT">
-
+    <input type="button" id="submit-button" value="SUBMIT">
+    </form>
 
     <script>
-        var _fname
-        var _lname
-        var _hours
-        var _rate
+        var _fname // Variable is declared
+        var _lname // Variable is declared
+        var _hours // Variable is declared
+        var _rate // Variable is declared
+        //var full = `${_fname} ${_lname}`
+        //create gross, taxAmount, net variables and store corresponding data to them
+        //use a tax percentage of 20% (.2)
+        //var taxedPercent
+        //var _gross
+        //var _taxedAmount
+        //var _netPay
+
         var body = document.querySelector(`body`) //supports tick/quote/double
         console.log(body)
         var table = document.querySelector(`table`)
+        var form = document.querySelector(`form`)
         console.log(table)
         console.log(_fname)
         console.log(_lname)
@@ -84,7 +92,6 @@
             appendHTML += `Just adding some HTML with<i> javascript</i>` //string to append
             appendHTML += `</p>` //closing p
 
-        
         console.log(appendHTML)
         //add the new html elements to the page - this will add to the end of..
         body.innerHTML += appendHTML //the + is very important, removing removed everything but newP
@@ -105,87 +112,74 @@
             _fname = document.querySelector(`#first`).value
             //_fname = document.getElementById(`#first`).value //get element by ID doesn't work
             _lname = document.querySelector(`#last`).value
-            _hours = Number(document.querySelector(`#hours`).value)
-            _rate = Number(document.querySelector(`#rate`).value)
-
-
-            //console.log() all four values
-            
-            console.log(_fname)
-            console.log(_lname)
-            console.log(_hours)
-            console.log(_rate)
+            _hours = Number(document.querySelector(`#hours`).value) //convert both hours and rate to Number() data types
+            _rate = Number(document.querySelector(`#rate`).value) //convert both hours and rate to Number() data types
+ 
+            console.log(_fname) //console.log() all four values
+            console.log(_lname) //console.log() all four values
+            console.log(_hours) //console.log() all four values
+            console.log(_rate) //console.log() all four values
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
             var hello = document.querySelector(`#hello`)
-            hello.innerHTML += ` ${_fname} !`
+            hello.innerHTML += ` ${_fname} ${_lname}!`
             var info = document.querySelector(`#info`)
-            var full 
+            var full = `${_fname} ${_lname}`
 
             //console.log() the full name value
-            console.log()
-
-
-
-            //convert both hours and rate to Number() data types
-            
+            console.log(full)
 
 
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
-
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
-            var taxedPercent = .20
+            var _taxedPercent = .20
             var _gross = _rate * _hours
-            var _taxedAmount = _gross * taxedPercent
+            var _taxedAmount = _gross * _taxedPercent
             var _netPay = _gross - _taxedAmount
 
             //console.log() all three processed values, rounded to the second decimal place
+            console.log(_gross.toFixed(2))
+            console.log(_taxedAmount.toFixed(2))
             console.log(_netPay.toFixed(2))
 
 
+
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = ``
+            var finalMessage = ` ${full}, \n Hours Worked: ${_hours} \n Hourly Rate: ${_rate}`
+            console.log(finalMessage)
 
         
             //create a new var called 'info' and store the entire #info *HTML element* to it
             var info = document.querySelector(`#info`)
-            info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_netPay}</p>`
+            info.innerHTML += `<p><b>${finalMessage}<b></p>` //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
+            //info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_netPay}</p>`
             //create a new var called 'num' and store the entire #check *HTML element* to it
+            var num = document.querySelector(`#check`)
+            num.innerHTML += `<p><b>Gross:</b> $${_gross.toFixed(2)} <b>Taxed</b> $${_taxedAmount.toFixed(2)} <b>Net Pay</b> $${_netPay.toFixed(2)}</p>`
             
-
-            //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
-
-
-
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-
-
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
-            /*var button = document.querySelector(`#SUBMIT`)
-            //demoing an anonymous function (function without a name; immediately defined
-            //we use these when the function will not be reused outside of the specific event
-            button.addEventListener(`click`, function(event){
-                console.log(event)
-            })*/
+
             var button = document.querySelector(`#SUBMIT`)
             //demoing an anonymous function (function without a name; immediately defined
             //we use these when the function will not be reused outside of the specific event
-            document.querySelector(`#enter-button`).addEventListener(`click`, submitNow)
-            /*utton.addEventListener(`click`, function(event)
+            
+            button.addEventListener(`click`, function(event)
             {
                 console.log(event)
             }) //this is weird that the ) comes after {}, but okay Javascript.
-            document.querySelector(`#enter-button`).addEventListener(`click`, submitNow)*/
+            
+            document.querySelector(`#submit-button`).addEventListener(`click`, submitNow)
             function submitNow(e)
             {
                 console.log(`Inside submit function`)
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
 
-                alert(`${full}\nHOURS: ${_hours}\nRATE: $${_rate.toFixed(2)}\n\nGROSS PAY: $${_gross.toFixed(2)}\nTAX AMOUNT: $${_taxedAmount.toFixed(2)}\nNET PAY: $${netPay.toFixed(2)}`)
+                alert(`${full}\nHOURS: ${_hours}\nRATE: $${_rate.toFixed(2)}\n\nGROSS PAY: $${_gross.toFixed(2)}\nTAX AMOUNT: $${_taxedAmount.toFixed(2)}\nNET PAY: $${_netPay.toFixed(2)}`)
             }
             
         }
