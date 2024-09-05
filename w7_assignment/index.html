@@ -103,33 +103,27 @@
         {
             console.log('inside the function') //confirmation log i am in the function.
             //get each *value* from the form elements (first name, last name, hours worked, hourly rate) and store them into vars
-
             /*USE THE FOLLOWING VARIABLE NAMES:
-            fname --> first name, #first
-            lname --> last name, #last
-            hours --> hours worked, #hours
-            rate --> hourly rate, #rate */
+            fname -> first name, #first
+            lname -> last name, #last
+            hours -> hours worked, #hours
+            rate -> hourly rate, #rate*/  // removed a - from -->, looks like this was closing the comment even though we are withing the <script>  we are also still withing <html>
             fname = document.querySelector(`#first`).value
             //_fname = document.getElementById(`#first`).value //get element by ID doesn't work
             lname = document.querySelector(`#last`).value
             hours = Number(document.querySelector(`#hours`).value) //convert both hours and rate to Number() data types
             rate = Number(document.querySelector(`#rate`).value) //convert both hours and rate to Number() data types
- 
             console.log(fname) //console.log() all four values
             console.log(lname) //console.log() all four values
             console.log(hours) //console.log() all four values
             console.log(rate) //console.log() all four values
-
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
             var hello = document.querySelector(`#hello`)
-            hello.innerHTML += ` ${fname} ${lname}!`
+            hello.innerHTML += `${fname} ${lname}!`
             var info = document.querySelector(`#info`)
             var full = `${fname} ${lname}`
-
             //console.log() the full name value
             console.log(full)
-
-
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
@@ -137,42 +131,31 @@
             var gross = rate * hours
             var taxedAmount = gross * taxedPercent
             var net = gross - taxedAmount
-
             //console.log() all three processed values, rounded to the second decimal place
             console.log(gross.toFixed(2))
             console.log(taxedAmount.toFixed(2))
             console.log(net.toFixed(2))
-
-
-
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
             var finalMessage = ` ${full}, \n Hours Worked: ${hours} \n Hourly Rate: ${rate}`
             console.log(finalMessage)
-
-        
             //create a new var called 'info' and store the entire #info *HTML element* to it
             var info = document.querySelector(`#info`)
             info.innerHTML += `<p><b>${finalMessage}<b></p>` //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
-            //info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_net}</p>`
+            //info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_net}</p>` //comment this out, line 152 now does this.
             //create a new var called 'num' and store the entire #check *HTML element* to it
             var num = document.querySelector(`#check`)
             num.innerHTML += `<p><b>Gross:</b> $${gross.toFixed(2)} <b>Taxed</b> $${taxedAmount.toFixed(2)} <b>Net Pay</b> $${net.toFixed(2)}</p>`
-            
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
-
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
-            //when the #submit button is clicked, the submitNow function should run
-
-            var button = document.querySelector(`#SUBMIT`)
+            //when the #submit button is clicked, the submitNow function should run 
+            var button = document.querySelector(`#submit-button`)
             //demoing an anonymous function (function without a name; immediately defined
-            //we use these when the function will not be reused outside of the specific event
-            
-            /*button.addEventListener(`click`, function(event)
+            //we use these when the function will not be reused outside of the specific event 
+            button.addEventListener(`click`, function(event)
             {
-                console.log(event)
-            }) //this is weird that the ) comes after {}, but okay Javascript. */
-            
-            document.querySelector(`#submit-button`).addEventListener(`click`, submitNow)
+                console.log(`testing no name funtion, ${event}`)
+            }) 
+            document.querySelector(`#submit-button`).addEventListener(`click`, submitNow) 
             function submitNow(e)
             {
                 console.log(`Inside submit function`)
@@ -180,8 +163,7 @@
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
 
                 alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxedAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
-            }
-            
+            } 
         }
         
     </script>
