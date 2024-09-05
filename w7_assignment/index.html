@@ -64,10 +64,10 @@
     </form>
 
     <script>
-        var _fname // Variable is declared
-        var _lname // Variable is declared
-        var _hours // Variable is declared
-        var _rate // Variable is declared
+        var fname // Variable is declared
+        var lname // Variable is declared
+        var hours // Variable is declared
+        var rate // Variable is declared
         //var full = `${_fname} ${_lname}`
         //create gross, taxAmount, net variables and store corresponding data to them
         //use a tax percentage of 20% (.2)
@@ -81,20 +81,20 @@
         var table = document.querySelector(`table`)
         var form = document.querySelector(`form`)
         console.log(table)
-        console.log(_fname)
-        console.log(_lname)
-        console.log(_hours)
-        console.log(_rate)
+        console.log(fname)
+        console.log(lname)
+        console.log(hours)
+        console.log(rate)
         //edit the below statement to select the #enter-button id from the HTML file
         
-        var appendHTML = ``
-            appendHTML += '<p>' //newP = NewP + '<p>'
-            appendHTML += `Just adding some HTML with<i> javascript</i>` //string to append
-            appendHTML += `</p>` //closing p
+        var newHTML = ``
+            newHTML += '<p>' //newP = NewP + '<p>'
+            newHTML += `Just adding some HTML with<i> javascript</i>` //string to append
+            newHTML += `</p>` //closing p
 
-        console.log(appendHTML)
+        console.log(newHTML)
         //add the new html elements to the page - this will add to the end of..
-        body.innerHTML += appendHTML //the + is very important, removing removed everything but newP
+        body.innerHTML += newHTML //the + is very important, removing removed everything but newP
         body.style.color = `green`
         
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
@@ -109,22 +109,22 @@
             lname --> last name, #last
             hours --> hours worked, #hours
             rate --> hourly rate, #rate */
-            _fname = document.querySelector(`#first`).value
+            fname = document.querySelector(`#first`).value
             //_fname = document.getElementById(`#first`).value //get element by ID doesn't work
-            _lname = document.querySelector(`#last`).value
-            _hours = Number(document.querySelector(`#hours`).value) //convert both hours and rate to Number() data types
-            _rate = Number(document.querySelector(`#rate`).value) //convert both hours and rate to Number() data types
+            lname = document.querySelector(`#last`).value
+            hours = Number(document.querySelector(`#hours`).value) //convert both hours and rate to Number() data types
+            rate = Number(document.querySelector(`#rate`).value) //convert both hours and rate to Number() data types
  
-            console.log(_fname) //console.log() all four values
-            console.log(_lname) //console.log() all four values
-            console.log(_hours) //console.log() all four values
-            console.log(_rate) //console.log() all four values
+            console.log(fname) //console.log() all four values
+            console.log(lname) //console.log() all four values
+            console.log(hours) //console.log() all four values
+            console.log(rate) //console.log() all four values
 
             //add the first and last name values together and store into a new variable called 'full' holding the user's full name
             var hello = document.querySelector(`#hello`)
-            hello.innerHTML += ` ${_fname} ${_lname}!`
+            hello.innerHTML += ` ${fname} ${lname}!`
             var info = document.querySelector(`#info`)
-            var full = `${_fname} ${_lname}`
+            var full = `${fname} ${lname}`
 
             //console.log() the full name value
             console.log(full)
@@ -133,20 +133,20 @@
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
-            var _taxedPercent = .20
-            var _gross = _rate * _hours
-            var _taxedAmount = _gross * _taxedPercent
-            var _netPay = _gross - _taxedAmount
+            var taxedPercent = .20
+            var gross = _rate * hours
+            var taxedAmount = gross * taxedPercent
+            var netPay = gross - taxedAmount
 
             //console.log() all three processed values, rounded to the second decimal place
-            console.log(_gross.toFixed(2))
-            console.log(_taxedAmount.toFixed(2))
-            console.log(_netPay.toFixed(2))
+            console.log(gross.toFixed(2))
+            console.log(taxedAmount.toFixed(2))
+            console.log(netPay.toFixed(2))
 
 
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
-            var finalMessage = ` ${full}, \n Hours Worked: ${_hours} \n Hourly Rate: ${_rate}`
+            var finalMessage = ` ${full}, \n Hours Worked: ${hours} \n Hourly Rate: ${rate}`
             console.log(finalMessage)
 
         
@@ -156,7 +156,7 @@
             //info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_netPay}</p>`
             //create a new var called 'num' and store the entire #check *HTML element* to it
             var num = document.querySelector(`#check`)
-            num.innerHTML += `<p><b>Gross:</b> $${_gross.toFixed(2)} <b>Taxed</b> $${_taxedAmount.toFixed(2)} <b>Net Pay</b> $${_netPay.toFixed(2)}</p>`
+            num.innerHTML += `<p><b>Gross:</b> $${gross.toFixed(2)} <b>Taxed</b> $${taxedAmount.toFixed(2)} <b>Net Pay</b> $${netPay.toFixed(2)}</p>`
             
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
 
@@ -179,7 +179,7 @@
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
 
-                alert(`${full}\nHOURS: ${_hours}\nRATE: $${_rate.toFixed(2)}\n\nGROSS PAY: $${_gross.toFixed(2)}\nTAX AMOUNT: $${_taxedAmount.toFixed(2)}\nNET PAY: $${_netPay.toFixed(2)}`)
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxedAmount.toFixed(2)}\nNET PAY: $${_netPay.toFixed(2)}`)
             }
             
         }

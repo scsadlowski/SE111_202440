@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week 8 day 2</title>
+</head>
+<body>
+    <!--html content-->
+    <h1> W8 Javascript Demo | arrays and objects</h1>
+    
+    <div>
+        <!--eventually we will write information here via JS to display-->
+    </div>
+    <!--JS script-->
+    <script>
+        //basic key + value pair --> variableName = 
+        var name = "Suzanne"
+        console.log(`Variable: ${name}`)
+
+        //arrays....................
+        //key --> [index] or [i]
+
+        //create new and populate array
+        //to just create: var people = []
+        var people =[
+            `Katie`,
+            `Ace`,
+            `Ian`
+        ]
+        console.log(`array: ${people}`)//entire collection of data
+        console.log(`array: ${people[0]}`) //one value within array
+        //arrayName[index] --> name +key = value
+        console.log(`array: ${people.length}`) //see an inherent value....
+
+        console.log(`Array: ${people[people.lenth-1]}`) //last person in the array
+        people[people.length] = `Jose`
+        console.log(`Array: ${people}`) // entire collection of data
+
+        //helpful native property for array types --> .push(), adds...
+        //people.push(prompt(`Enter a name to add to the array: `))  //try this later
+        //or
+        //people.push(document.querySelector(`first))
+        //or 
+        people.push(`Cullen`)
+        console.log(`Array: ${people}`)
+
+
+
+        //parallel arrays...............
+        var color = [
+            `grey`,
+            `blue`,
+            `black`,
+            `green`,
+            `purple`
+            ]
+
+        //processing arrays...............
+        //"process" & "data structure" --> FOR loop!
+        for(let i=0; i < people.length; i++)
+        {
+            console.log(`INDEX: ${i}\n${people[1]}'s favorite color is ${color[i]}')
+            age.push(prompt(`How old is ${people[i]}: `))
+        }
+
+        for(let i = 0; i < people.length; i++)
+        {
+            console.log(`${people[i]} is ${age[i]} years old`)
+        }
+
+
+        //adding content to the html page
+
+        //first, select and stre the element which will hold the indented content
+        var output = document.querySelector(`#output`)
+        //process throu the array
+        for (let i=0; i < people.length; i++)
+        {
+            output.innerHTML += `<p>${i}\n${people[i]}is ${age[i]} yo and their favorite color is ${color[i]}</p>`
+        }
+
+        //OBJECTS
+        //objects can handle MIXED data types
+        var Seranna = {
+            race: "Half-Elf",
+            classType: "Warlock",
+            Ivl 5,
+            familiar: [fType: "pseudodragon", name: "Viktor", hp: 20]
+            hp: 33,
+            ac: 19,
+            items: ["amulet", "book", "cloak", "scholar's pack"]
+            greeting: function() {alert(`Hello there ${this.name}!)}  //the birth of a method
+        }
+
+        Seranna.greeting()
+
+            var Lolli = {
+            race: "Half-Elf",
+            classType: "Warlock",
+            Ivl 5,
+            familiar: [fType: "pseudodragon", name: "Viktor", hp: 20]
+            hp: 33,
+            ac: 19,
+            items: ["amulet", "book", "cloak", "scholar's pack"]
+            greetings: function() {alert(`Hello there ${this.name}!)}  //the birth of a method
+        }
+
+        //create an array and populated with your D&D character objects
+        var party = [
+            Seranna,
+            Lolli
+        ]
+        //empty string for writing the content to HTML @ end
+        var partyOutput = ''
+
+        //process the outter/main structure [standard array]
+        for(let i = 0; i < party.length; i++)
+        {
+            //this loop controls which array value {object} we are looking at
+            partyOutput += `<h3>Party Member #${i}: ${party[i]}.name</h3>`
+            party[i].greeting()
+
+            for(let key in party[i])
+            {   
+                //this loop goes through the individual object at each position in the array; it will loop through every KEY (property) that each object has
+                partyOutput += `<p><b>${key}:</b> ${party[i]}.key</p>` //.key not correct
+                partyOutput += `<p><b>${key}:</b> ${party[i][key]}</p>` //.key not correct //know your data types
+            }
+
+            partyOutput += `<hr>`
+
+        }
+        //write the info to the HTML
+        document.querySelector(`#output`).innerHTML += partyOutput
+
+    </script>
+</body>
+</html>
