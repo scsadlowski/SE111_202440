@@ -74,7 +74,7 @@
         //var taxedPercent
         //var _gross
         //var _taxedAmount
-        //var _netPay
+        //var _net
 
         var body = document.querySelector(`body`) //supports tick/quote/double
         console.log(body)
@@ -87,14 +87,14 @@
         console.log(rate)
         //edit the below statement to select the #enter-button id from the HTML file
         
-        var newHTML = ``
-            newHTML += '<p>' //newP = NewP + '<p>'
-            newHTML += `Just adding some HTML with<i> javascript</i>` //string to append
-            newHTML += `</p>` //closing p
+        var newP = ``
+            newP += '<p>' //newP = NewP + '<p>'
+            newP += `Just adding some HTML with<i> javascript</i>` //string to append
+            newP += `</p>` //closing p
 
-        console.log(newHTML)
+        console.log(newP)
         //add the new html elements to the page - this will add to the end of..
-        body.innerHTML += newHTML //the + is very important, removing removed everything but newP
+        body.innerHTML += newP //the + is very important, removing removed everything but newP
         body.style.color = `green`
         
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
@@ -134,14 +134,14 @@
             //create gross, taxAmount, net variables and store corresponding data to them
             //use a tax percentage of 20% (.2)
             var taxedPercent = .20
-            var gross = _rate * hours
+            var gross = rate * hours
             var taxedAmount = gross * taxedPercent
-            var netPay = gross - taxedAmount
+            var net = gross - taxedAmount
 
             //console.log() all three processed values, rounded to the second decimal place
             console.log(gross.toFixed(2))
             console.log(taxedAmount.toFixed(2))
-            console.log(netPay.toFixed(2))
+            console.log(net.toFixed(2))
 
 
 
@@ -153,10 +153,10 @@
             //create a new var called 'info' and store the entire #info *HTML element* to it
             var info = document.querySelector(`#info`)
             info.innerHTML += `<p><b>${finalMessage}<b></p>` //edit the innerHTML of the #info element (now the 'info' js var) to hold the value of 'finalMessage'
-            //info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_netPay}</p>`
+            //info.innerHTML += `<p><b>Gross:</b> $${_gross} <b>Taxed</b> $${_taxedAmount} <b>Net Pay</b> $${_net}</p>`
             //create a new var called 'num' and store the entire #check *HTML element* to it
             var num = document.querySelector(`#check`)
-            num.innerHTML += `<p><b>Gross:</b> $${gross.toFixed(2)} <b>Taxed</b> $${taxedAmount.toFixed(2)} <b>Net Pay</b> $${netPay.toFixed(2)}</p>`
+            num.innerHTML += `<p><b>Gross:</b> $${gross.toFixed(2)} <b>Taxed</b> $${taxedAmount.toFixed(2)} <b>Net Pay</b> $${net.toFixed(2)}</p>`
             
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
 
@@ -179,7 +179,7 @@
                 /*NOTE FOR TESTING:
                     *if written correctly, you will see an alert() with all info entered as well as processed!*/
 
-                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxedAmount.toFixed(2)}\nNET PAY: $${_netPay.toFixed(2)}`)
+                alert(`${full}\nHOURS: ${hours}\nRATE: $${rate.toFixed(2)}\n\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxedAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
             }
             
         }
