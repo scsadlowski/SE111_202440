@@ -99,7 +99,7 @@
             <!--***EDIT THE HREF attribute to include your GitHub repo link-->
 
             <!--+1 BONUS POINT: instead of adding the href in the HTML line below, instead add the link via your in-document javascript - make it the first line inside of the <script></script>-->
-            <a id="gitHub-link" href="" target="_blank">Back to Suzanne's GitHub Repo!</a>
+            <a id="gitHub-link" href="" target="_blank">Back to Suzanne's GitHub Repo!</a> //link added to in-doc JS
 
         </div><!--/ #header-->
 
@@ -189,7 +189,6 @@
 
     </div>
 
-
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
 
@@ -218,17 +217,12 @@
         //view the answers in the console; we are using a for loop for this since we collected and stored all of the answers into an array, and now we can practice working with them
         //THIS WILL NOT WORK IF YOU HAVE NOT YET COMPLETED YOUR #3 and #4 RIDDLES CORRECTLY IN THE HTML!
 
-
         for (let i = 0; i < 5; i++){
             var question = document.querySelector(`#question${i}`)
             console.log(`QUESTION #${i}\n${question.innerHTML} \n i = ${i} -> ${answerChecks[i]}`)
         }
 
         //-----------------------------------------------------------------------------------------
-
-        
-
-
         //the below function is run when an <h6> with an onclick attribute [onclick="reveal(#)"] is clicked
         //the 'num' parameter corresponds with the reveal(#) or # of the question; this helps map to the correct answer or 'a#'' 
         function reveal(num){
