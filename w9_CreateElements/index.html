@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements</title>
+    <meta name="author" content="s sadlowski">
+    <meta name="description" content="Creating Elements">
+    <style type="text/css">
+    .border {
+        border:1px solid black;
+    }
+    .purple {
+        min-height:20px;
+    }
+    </style>
+</head>
+
+<body>
+    <h1>Let's play, ..who is your favorite character</h1>
+    <h3>I will use .createElement() and .appendChild()</h3>
+</body>
+
+<script type="text/javascript">
+	//Use this Array of objects to complete the assignment.
+	var people = [
+		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		{first:"Marion", last:"Cobretti", credit:"Cobra" }
+	]
+    // Let's console the 7 keys from the people array
+    console.log(people[0])
+    console.log(people[1])
+    console.log(people[2])
+    console.log(people[3])
+    console.log(people[4])
+    console.log(people[5])
+    console.log(people[6])
+
+    // Select the body element so i can append to it later
+    var body = document.querySelector(`body`)
+    //Let's console what's currently in the body
+    console.log(body)
+    //Let's see the properties of the body element
+    console.dir(body)
+
+    //for every index of people[] we want to use same thing. //Will use R for my for loop variable
+    for(let i=0; i < length.people; i++)//R is arbitrary
+    {
+        //time to create elements
+        var appendDiv = document.createElement(`div`)
+        //and we use .setAttribute to add attributes to our div
+        appendDiv.setAttribute(`id`, i)
+        appendDiv.setAttribute(`id`, people[i].first)
+        appendDiv.setAttribute(`id`, `${i}-${people[i].first}`)
+        appendDiv.setAttribute(`class`, purple)
+        console.log(i)
+
+        //We need to loop through every property of the object
+        for(properties in people[i])
+        {
+            //create <p> element
+            var p = document.createElement('p')
+            //
+            var text = document.createTextNode(people[i][properties])
+            //
+            p.appendChild(text)
+            //
+            appendDiv.appendChild(p)
+        }
+        body.appendChild(appendDiv)
+    }  
+	
+</script>
+
+</html>
