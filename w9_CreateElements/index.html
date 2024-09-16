@@ -51,24 +51,24 @@
         console.dir(body)
 
     //for every index of people[] we want to use same thing. //Will use R for my for loop variable
-        for(let i=0; i < people.length; i++)
+        for(let R=0; R < people.length; R++)
         {
         //time to create elements
             var appendDiv = document.createElement(`div`)
         //and we use .setAttribute to add attributes to our div
-            appendDiv.setAttribute(`id`, i )
-            appendDiv.setAttribute(`id`, people[i].first)
-            appendDiv.setAttribute(`id`, `${i}-${people[i].first}`)
+            appendDiv.setAttribute(`id`, R )
+            appendDiv.setAttribute(`id`, people[R].first)
+            appendDiv.setAttribute(`id`, `${R}-${people[R].first}`)
             appendDiv.setAttribute(`class`, `border`)
         //console.log(i)
 
         //We need to loop through every property of the object
-            for(valueProperties in people[i])
+            for(valueProperties in people[R])
             {
             //create <p> element
                 var p = document.createElement('p')
             //
-                var text = document.createTextNode(people[i][valueProperties])
+                var text = document.createTextNode(people[R][valueProperties])
             //add text/append
                 p.appendChild(text)
             //add p/append to 7
