@@ -8,74 +8,75 @@
     <meta name="author" content="s sadlowski">
     <meta name="description" content="Creating Elements">
     <style type="text/css">
-    .border {
-        border:1px solid black;
-    }
-    .purple {
-        min-height:20px;
-    }
+        .border {
+            border:1px solid rgb(117, 56, 115);
+            margin-bottom:10px;
+            min-height:20px;
+        }
     </style>
 </head>
 
 <body>
     <h1>Let's play, ..who is your favorite character</h1>
     <h3>I will use .createElement() and .appendChild()</h3>
-</body>
 
-<script type="text/javascript">
+
+    <script type="text/javascript">
+
 	//Use this Array of objects to complete the assignment.
-	var people = [
-		{first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
-		{first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
-		{first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
-		{first:"Kevin", last:"McCallister", credit:"Home Alone" },
-		{first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
-		{first:"Buzz", last:"Lightyear", credit:"Toy Story" },
-		{first:"Marion", last:"Cobretti", credit:"Cobra" }
-	]
+	    var people = [
+		    {first:"Jason", last:"Vorhees", credit:"Friday the 13th"},
+		    {first:"Freddy", last:"Krueger", credit:"A Nightmare on Elm Street" },
+		    {first:"Roger", last:"Rabbit", credit:"Who Framed Roger Rabbit" },
+		    {first:"Kevin", last:"McCallister", credit:"Home Alone" },
+		    {first:"Godzilla", last:"King of The Monsters", credit:"Godzilla" },
+		    {first:"Buzz", last:"Lightyear", credit:"Toy Story" },
+		    {first:"Marion", last:"Cobretti", credit:"Cobra" }
+	    ]
     // Let's console the 7 keys from the people array
-    console.log(people[0])
-    console.log(people[1])
-    console.log(people[2])
-    console.log(people[3])
-    console.log(people[4])
-    console.log(people[5])
-    console.log(people[6])
+        console.log(people[0])
+        console.log(people[1])
+        console.log(people[2])
+        console.log(people[3])
+        console.log(people[4])
+        console.log(people[5])
+        console.log(people[6])
 
     // Select the body element so i can append to it later
-    var body = document.querySelector(`body`)
+        var body = document.querySelector(`body`)
+        
     //Let's console what's currently in the body
-    console.log(body)
+        console.log(body)
     //Let's see the properties of the body element
-    console.dir(body)
+        console.dir(body)
 
     //for every index of people[] we want to use same thing. //Will use R for my for loop variable
-    for(let i=0; i < length.people; i++)//R is arbitrary
-    {
+        for(let i=0; i < people.length; i++)
+        {
         //time to create elements
-        var appendDiv = document.createElement(`div`)
+            var tempDiv = document.createElement(`div`)
         //and we use .setAttribute to add attributes to our div
-        appendDiv.setAttribute(`id`, i)
-        appendDiv.setAttribute(`id`, people[i].first)
-        appendDiv.setAttribute(`id`, `${i}-${people[i].first}`)
-        appendDiv.setAttribute(`class`, purple)
-        console.log(i)
+            tempDiv.setAttribute(`id`, i )
+            tempDiv.setAttribute(`id`, people[i].first)
+            tempDiv.setAttribute(`id`, `${i}-${people[i].first}`)
+            tempDiv.setAttribute(`class`, `border`)
+        //console.log(i)
 
         //We need to loop through every property of the object
-        for(properties in people[i])
-        {
+            for(key in people[i])
+            {
             //create <p> element
-            var p = document.createElement('p')
+                var p = document.createElement('p')
             //
-            var text = document.createTextNode(people[i][properties])
-            //
-            p.appendChild(text)
-            //
-            appendDiv.appendChild(p)
-        }
-        body.appendChild(appendDiv)
-    }  
-	
-</script>
-
+                var text = document.createTextNode(people[i][key])
+            //add text/append
+                p.appendChild(text)
+            //add p/append to 7
+                tempDiv.appendChild(p)
+            }
+            body.appendChild(tempDiv)
+        }  
+	    
+    </script>
+</body>
 </html>
