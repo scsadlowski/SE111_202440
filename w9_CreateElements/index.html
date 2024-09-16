@@ -9,15 +9,15 @@
     <meta name="description" content="Creating Elements">
     <style type="text/css">
         .border {
-            border:1px solid rgb(117, 56, 115);
+            border:1px solid rgb(72, 11, 237);
             margin-bottom:10px;
-            min-height:20px;
+            min-height:10px;
         }
     </style>
 </head>
 
 <body>
-    <h1>Let's play, ..who is your favorite character</h1>
+    <h1>Let's list our favorite characters!</h1>
     <h3>I will use .createElement() and .appendChild()</h3>
 
 
@@ -54,27 +54,27 @@
         for(let i=0; i < people.length; i++)
         {
         //time to create elements
-            var tempDiv = document.createElement(`div`)
+            var appendDiv = document.createElement(`div`)
         //and we use .setAttribute to add attributes to our div
-            tempDiv.setAttribute(`id`, i )
-            tempDiv.setAttribute(`id`, people[i].first)
-            tempDiv.setAttribute(`id`, `${i}-${people[i].first}`)
-            tempDiv.setAttribute(`class`, `border`)
+            appendDiv.setAttribute(`id`, i )
+            appendDiv.setAttribute(`id`, people[i].first)
+            appendDiv.setAttribute(`id`, `${i}-${people[i].first}`)
+            appendDiv.setAttribute(`class`, `border`)
         //console.log(i)
 
         //We need to loop through every property of the object
-            for(key in people[i])
+            for(valueProperties in people[i])
             {
             //create <p> element
                 var p = document.createElement('p')
             //
-                var text = document.createTextNode(people[i][key])
+                var text = document.createTextNode(people[i][valueProperties])
             //add text/append
                 p.appendChild(text)
             //add p/append to 7
-                tempDiv.appendChild(p)
+                appendDiv.appendChild(p)
             }
-            body.appendChild(tempDiv)
+            body.appendChild(appendDiv)
         }  
 	    
     </script>
